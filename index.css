@@ -20,9 +20,21 @@ button {
     width: 50%
 }
 
+#result-container h2 {
+    margin-bottom: 0;
+}
+
 #amount {
     font-size: 15vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+#conversion-amount {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 footer {
     position: fixed;
     left: 0;
