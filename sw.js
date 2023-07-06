@@ -31,5 +31,6 @@ const resourcesToPrecache = [
     'logo64.ico',
     'logo128.png',
     'logo512.png',
+    'sad.png',
     'manifest.json'
 ];
