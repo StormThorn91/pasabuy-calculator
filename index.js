@@ -1,6 +1,18 @@
 const APILink = 'https://www.freeforexapi.com/api/live?pairs=USDPHP';
 const handlingPercent = 0.15;
 
+if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+        .then(reg => {
+            console.log("Registered! ", reg)
+        }).catch(err => {
+            console.log("Registration failed ", err)
+        })
+    });
+}
+
+
 window.onload = function () {
     var form = document.querySelector("form");
     form.onsubmit = calculation.bind(form);
