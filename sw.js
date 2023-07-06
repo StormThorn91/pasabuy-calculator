@@ -27,6 +27,7 @@ const resourcesToPrecache = [
     'index.html',
     'index.js',
     'index.css',
+    'desktop-guard.html',
     'logo64.ico',
     'logo128.png',
     'logo512.png',

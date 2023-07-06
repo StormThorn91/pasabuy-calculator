@@ -13,6 +13,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+if (screen.width >= 930) {
+    document.location = "desktop-guard.html";
+}
+
 
 window.onload = function () {
     var form = document.querySelector("form");
