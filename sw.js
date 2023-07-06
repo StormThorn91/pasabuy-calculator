@@ -13,10 +13,12 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-    event.respondWith(caches.match(event.request))
-    .then(cachedResponse => {
-        return cachedResponse || fetch(event.request);
-    })
+    console.log('Fetch intercepted for: ' + event.request.url);
+    //TODO: explore more on these codes below to fix error it causes
+    // event.respondWith(caches.match(event.request))
+    // .then(cachedResponse => {
+    //     return cachedResponse || fetch(event.request);
+    // })
 });
 
 const cacheName = 'pasabuy-calc-v1';
