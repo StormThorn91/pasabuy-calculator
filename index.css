@@ -1,0 +1,25 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    text-align: center;
+}
+input {
+    font-size: 5vw;
+    text-align: center;
+
+}
+p {
+    font-size: 5vw;
+}
+
+button {
+    height: 50px;
+    width: 50%
+}
+
+#amount {
+    font-size: 15vw;
+}

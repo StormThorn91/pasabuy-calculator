@@ -10,6 +10,8 @@ const conversion = async (val) => {
     });
 
     let returnValue = await val * apiResponse.rates.USDPHP.rate;
+    console.log(apiResponse.rates.USDPHP.rate);
+    console.log(returnValue);
     document.getElementById("conversion-amount").innerHTML = 'Php 1.00 = $ ' + Number(apiResponse.rates.USDPHP.rate).toFixed(2);
 
     return returnValue

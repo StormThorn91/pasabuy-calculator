@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Pasabuy Calculator</title>
 </head>
 
@@ -15,12 +16,11 @@
         </div>
         <div class="form-container">
             <h3>Discounted Amount</h3>
-            $<input type="number" id="real-amount" placeholder="Original Price" required>
-
-            <input type="number" id="discount-percent" placeholder="Discount Percentage" required>%
+            <input type="number" id="real-amount" placeholder="Original Price in USD" required>
+            <input type="number" id="discount-percent" placeholder="Discount Percentage" required>
 
             <h3>Tax Input</h3>
-            <input type="number" id="tax-percent" placeholder="Tax Percentage" required>%
+            <input type="number" id="tax-percent" placeholder="Tax Percentage" required>
 
             <p>Note: Final Amount will have a 15% markup in dollar before peso conversion</p>
             <button id ="submit" onclick="calculation()">Submit</button>
