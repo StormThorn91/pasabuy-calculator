@@ -10,26 +10,26 @@
 </head>
 
 <body>
-    <div class="main-contaienr">
+    <div class="main-container">
         <div class="title-container">
             <h1>Pasabuy Calculator</h1>
         </div>
-        <div class="form-container">
+        <form class="form-container">
             <h3>Discounted Amount</h3>
-            <input type="number" id="real-amount" placeholder="Original Price in USD" required>
-            <input type="number" id="discount-percent" placeholder="Discount Percentage" required>
+            <input type="number" step="0.01" id="real-amount" placeholder="Original Price in USD" required />
+            <input type="number" step="0.01" id="discount-percent" placeholder="Discount Percentage" required />
 
             <h3>Tax Input</h3>
-            <input type="number" id="tax-percent" placeholder="Tax Percentage" required>
+            <input type="number" step="0.01" id="tax-percent" placeholder="Tax Percentage" required />
 
             <p>Note: Final Amount will have a 15% markup in dollar before peso conversion</p>
-            <button id ="submit" onclick="calculation()">Submit</button>
-            <div id="result-container">
+            <button id ="submit" type="submit">Submit</button>
+        </form>
+        <div id="result-container">
                 <h2>Total Amount:</h2>
                 <h1 id="amount"></h1>
                 <h3 id="conversion-amount"></h3>
             </div>
-        </div>
     </div>
 </body>
 

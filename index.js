@@ -1,6 +1,11 @@
 const APILink = 'https://www.freeforexapi.com/api/live?pairs=USDPHP';
 const handlingPercent = 0.15;
 
+window.onload = function() {
+    var form = document.querySelector("form");
+    form.onsubmit = calculation.bind(form);
+}
+
 const conversion = async (val) => {
     document.getElementById("submit").disabled = true;
     let apiResponse = await fetch('https://cors-anywhere.herokuapp.com/' + APILink).then((response) => 
@@ -17,7 +22,8 @@ const conversion = async (val) => {
     return returnValue
 }
 
-const calculation = async () => {
+const calculation = async (e) => {
+    e.preventDefault();
     const realAmount = document.getElementById('real-amount').value;
     const discountPercent = document.getElementById('discount-percent').value / 100;
     const taxPercent = document.getElementById('tax-percent').value / 100;
@@ -29,8 +35,7 @@ const calculation = async () => {
     var handlingAmount = taxedAmount * handlingPercent;
     var withHandlingAmount = taxedAmount + handlingAmount;
     var totalAmount = Number(await conversion(withHandlingAmount)).toFixed(2);
-    var conversionAmount
-
+    
     document.getElementById("amount").innerHTML = 'Php ' + totalAmount;
     document.getElementById("submit").disabled = false;
 }
