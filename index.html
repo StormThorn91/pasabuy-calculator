@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Pasabuy Calculator</title>
+</head>
+
+<body>
+    <div class="main-contaienr">
+        <div class="title-container">
+            <h1>Pasabuy Calculator</h1>
+        </div>
+        <div class="form-container">
+            <h3>Discounted Amount</h3>
+            $<input type="number" id="real-amount" required>
+            <input type="number" id="discount-percent" required>%
+
+            <h3>Tax Input</h3>
+            <input type="number" id="tax-percent" required>%
+
+            <p>Note: Final Amount will have a 15% markup in dollar before peso conversion</p>
+            <button onclick="calculation()">Submit</button>
+            <div class="result-container">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
