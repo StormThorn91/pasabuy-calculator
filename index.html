@@ -22,8 +22,11 @@
             <input type="number" id="tax-percent" required>%
 
             <p>Note: Final Amount will have a 15% markup in dollar before peso conversion</p>
-            <button onclick="calculation()">Submit</button>
-            <div class="result-container">
+            <button id ="submit" onclick="calculation()">Submit</button>
+            <div id="result-container">
+                <h2>Total Amount:</h2>
+                <h1 id="amount"></h1>
+                <h3 id="conversion-amount"></h3>
             </div>
         </div>
     </div>
