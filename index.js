@@ -13,7 +13,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-if (screen.width >= 930) {
+if (screen.width >= 700) {
     document.location = "desktop-guard.html";
 }
 
