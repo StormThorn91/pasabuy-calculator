@@ -55,14 +55,14 @@ const conversion = async (val) => {
                 localStorage.setItem('krwPhpConversion', krwToPhp);
                 returnValue = await val * krwToPhp;
                 console.log(krwToPhp);
-                document.getElementById("conversion-amount").innerHTML = '₩ = ' + Number(krwToPhp).toFixed(2) + "₱ 1.00";
+                document.getElementById("conversion-amount").innerHTML = '₩ ' + Number(krwToPhp).toFixed(2) + "= ₱ 1.00";
             }
         }
 
         else {
             returnValue = await val * apiResponseUSD.rates?.USDPHP?.rate;
             console.log(apiResponseUSD.rates.USDPHP.rate);
-            document.getElementById("conversion-amount").innerHTML = '$ 1.00 = ₱' + Number(apiResponseUSD.rates.USDPHP.rate).toFixed(2);
+            document.getElementById("conversion-amount").innerHTML = '$ 1.00 = ₱ ' + Number(apiResponseUSD.rates.USDPHP.rate).toFixed(2);
         }
     }
 
@@ -72,14 +72,14 @@ const conversion = async (val) => {
             forexValue = localStorage.getItem('krwPhpConversion');
             returnValue = val * forexValue;
             console.log(forexValue);
-            document.getElementById("conversion-amount").innerHTML = '₩ = ' + Number(forexValue).toFixed(2); + " ₱ = 1.00"
+            document.getElementById("conversion-amount").innerHTML = '₩ ' + Number(forexValue).toFixed(2); + "= ₱ 1.00"
         }
 
         else {
             forexValue = localStorage.getItem('usdPhpConversion');
             returnValue = val * forexValue;
             console.log(forexValue);
-            document.getElementById("conversion-amount").innerHTML = '$ 1.00 = ₱' + Number(forexValue).toFixed(2);
+            document.getElementById("conversion-amount").innerHTML = '$ 1.00 = ₱ ' + Number(forexValue).toFixed(2);
         }
     }
     console.log(returnValue);
